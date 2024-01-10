@@ -28,4 +28,22 @@ manager-proxy-4-1-byos    SUSE         gen1         SUSE:manager-proxy-4-1-byos:
 manager-proxy-4-1-byos    SUSE         gen1         SUSE:manager-proxy-4-1-byos:gen1:2022.03.08    2022.03.08
 manager-proxy-4-1-byos    SUSE         gen1         SUSE:manager-proxy-4-1-byos:gen1:2022.04.08    2022.04.08
 manager-proxy-4-1-byos    SUSE         gen2         SUSE:manager-proxy-4-1-byos:gen2:2021.12.09    2021.12.09
+...
 ```
+
+View available VMs sizes in a region. -l specifies the region
+
+```shell
+% az vm list-sizes -l francecentral -o table
+MaxDataDiskCount    MemoryInMb    Name                      NumberOfCores    OsDiskSizeInMb    ResourceDiskSizeInMb
+------------------  ------------  ------------------------  ---------------  ----------------  ----------------------
+4                   8192          Standard_D2a_v4           2                1047552           51200
+8                   16384         Standard_D4a_v4           4                1047552           102400
+16                  32768         Standard_D8a_v4           8                1047552           204800
+32                  65536         Standard_D16a_v4          16               1047552           409600
+32                  131072        Standard_D32a_v4          32               1047552           819200
+32                  196608        Standard_D48a_v4          48               1047552           1228800
+32                  262144        Standard_D64a_v4          64               1047552           1638400
+...
+```
+
